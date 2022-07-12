@@ -68,18 +68,20 @@ public class firstActivity extends AppCompatActivity implements View.OnClickList
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(view.getId(), fragment, null);
+        /*
+         *将此事务添加到后堆栈。这意味着交易
+         *在提交后将被记住，并将反转其操作
+         *后来从堆栈中弹出。
+         *<p>
+         *{@link#setReorderingAllowed（boolean）}必须设置为<code>true
+         *在与addToBackStack（）相同的事务中，允许该
+         *要重新排序的事务。
+         *@param name此后堆栈状态的可选名称，或null。
+         */
+        fragmentTransaction.addToBackStack(null);//描述返回栈的状态
         fragmentTransaction.commit();
     }
 
-/*
- *将此事务添加到后堆栈。这意味着交易
- *在提交后将被记住，并将反转其操作
- *后来从堆栈中弹出。
- *<p>
- *{@link#setReorderingAllowed（boolean）}必须设置为<code>true
- *在与addToBackStack（）相同的事务中，允许该
- *要重新排序的事务。
- *@param name此后堆栈状态的可选名称，或null。
- */
+
 
 }
