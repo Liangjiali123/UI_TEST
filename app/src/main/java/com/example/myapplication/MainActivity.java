@@ -32,11 +32,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.first:
-                Intent intent = new Intent(MainActivity.this,firstActivity.class);
-                startActivity(intent);
+                //UI
+                Intent intent1 = new Intent(MainActivity.this,firstActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.second:
+                //广播
                 // AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                Intent intent2 = new Intent(MainActivity.this,secondActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.third:
+                //数据存储
+                Intent intent3 = new Intent(MainActivity.this,thirdActivity.class);
+                startActivity(intent3);
+                break;
             default:
                 break;
         }

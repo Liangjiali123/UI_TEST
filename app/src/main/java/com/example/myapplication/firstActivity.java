@@ -27,6 +27,10 @@ public class firstActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(@Nullable Bundle savedInstanceState) {// @Nullable它们帮助您控制整个方法层次结构中的合约，如果 IntelliJ IDEA 发现合约被违反，它将报告检测到的问题，并指出 NullPointerException 可能发生的代码。消除空指针异常
         super.onCreate(savedInstanceState);
         setContentView(R.layout.title);
+
+//        rightFragment rightFragment = (rightFragment)getSupportFragmentManager().
+//                                      findFragmentById(R.id.right);//从布局文件中获取fragment实例
+
         ini();
     }
 /*
@@ -66,7 +70,7 @@ public class firstActivity extends AppCompatActivity implements View.OnClickList
 
     private void replacefragment(View view,Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();//开启事务
         fragmentTransaction.replace(view.getId(), fragment, null);
         /*
          *将此事务添加到后堆栈。这意味着交易
@@ -78,10 +82,17 @@ public class firstActivity extends AppCompatActivity implements View.OnClickList
          *要重新排序的事务。
          *@param name此后堆栈状态的可选名称，或null。
          */
-        fragmentTransaction.addToBackStack(null);//描述返回栈的状态
-        fragmentTransaction.commit();
+        fragmentTransaction.addToBackStack(null);//类似activity返回栈效果
+        fragmentTransaction.commit();//提交事务
     }
 
 
 
 }
+/*
+ *onAttach() 当Fragment和Activity建立关联时调用。
+ *onCreateView() 为Fragment创建视图（加载布局）时调用。
+ *onActivityCreated() 确保与Fragment相关联的Activity已经创建完毕时调用。
+ *onDestroyView() 当与Fragment关联的视图被移除时调用。
+ *onDetach() 当Fragment和Activity解除关联时调用。
+ */
