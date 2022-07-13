@@ -15,7 +15,7 @@ public class thirdActivity extends AppCompatActivity {
     }
     //文件存储
     private void save(){
-
+//
     }
     //sharedPreferences存储
     private void spSave(){
