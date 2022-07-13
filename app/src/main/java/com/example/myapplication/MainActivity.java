@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -46,6 +44,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //数据存储
                 Intent intent3 = new Intent(MainActivity.this,thirdActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.threeth:
+                //网络技术
+                Intent intent4 = new Intent(MainActivity.this, forthActivity.class);
+                startActivity(intent4);
+                break;
+            case R.id.floatButton:
+                //服务
+                Intent intent5 = new Intent(MainActivity.this, fivethActivity.class);
+                startActivity(intent5);
                 break;
             default:
                 break;

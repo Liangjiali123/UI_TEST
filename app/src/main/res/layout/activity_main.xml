@@ -9,7 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/white"/>
+        android:background="@color/white">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatButton"
+                android:layout_marginTop="300dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    </LinearLayout>
    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,6 +41,13 @@
            android:text="third"
            android:layout_weight="1"
            android:textAllCaps="false"/>
+       <Button
+       android:id="@+id/threeth"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="threeth"
+       android:layout_weight="1"
+       android:textAllCaps="false"/>
    </LinearLayout>
 
 
